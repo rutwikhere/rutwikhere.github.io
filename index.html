@@ -256,6 +256,30 @@ margin-top:50px;
 .hero h1{font-size:28px}
 }
 </style>
+    <script>
+(function () {
+  const path = window.location.pathname;
+  const params = new URLSearchParams(window.location.search);
+  const kid = params.get("kid");
+
+  const packageName = "com.techbrats.kritun"; // your real package
+  const playStore = "https://play.google.com/store/apps/details?id=" + packageName;
+
+  // If link is /post?kid=123
+  if (path.startsWith("/post") && kid) {
+
+    const appLink = "kritun://post?kid=" + kid;
+
+    // Try open app
+    window.location.href = appLink;
+
+    // Fallback to Play Store if app not installed
+    setTimeout(function () {
+      window.location.href = playStore;
+    }, 1500);
+  }
+})();
+</script>
 </head>
 
 <body>
@@ -328,3 +352,4 @@ helping players grow friendships and careers worldwide.
 
 </body>
 </html>
+
