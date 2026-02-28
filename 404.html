@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Opening Kritun...</title>
+  <script>
+    (function () {
+      const path = window.location.pathname;
+      const params = new URLSearchParams(window.location.search);
+      const kid = params.get("kid");
+
+      const packageName = "com.techbrats.kritun";
+      const playStore = "https://play.google.com/store/apps/details?id=" + packageName;
+
+      if (path.startsWith("/post") && kid) {
+
+        const appLink = "kritun://post?kid=" + kid;
+
+        // Try open app
+        window.location.href = appLink;
+
+        // Fallback to Play Store
+        setTimeout(function () {
+          window.location.href = playStore;
+        }, 1500);
+
+      } else {
+        // If not post link, go to homepage
+        window.location.href = "/";
+      }
+    })();
+  </script>
+</head>
+<body style="background:black;color:white;text-align:center;padding-top:40px;">
+  Opening Kritun...
+</body>
+</html>
