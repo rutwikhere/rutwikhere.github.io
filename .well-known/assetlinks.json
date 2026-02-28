@@ -1,0 +1,12 @@
+[
+    {
+      "relation": ["delegate_permission/common.handle_all_urls"],
+      "target": {
+        "namespace": "android_app",
+        "package_name": "com.techbrats.kritun",
+        "sha256_cert_fingerprints": [
+          "22:24:3A:02:53:3A:A7:3F:A2:36:AD:01:EC:49:70:68:58:6D:ED:8E:D6:74:1D:51:A0:08:2A:BB:34:54:D5:39"
+        ]
+      }
+    }
+  ]
