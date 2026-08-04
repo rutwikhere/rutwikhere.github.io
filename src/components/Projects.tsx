@@ -109,13 +109,13 @@ const PhoneCarousel = ({ images }: { images: string[] }) => {
         <>
           <button
             onClick={handlePrev}
-            className="absolute left-0 lg:left-2 top-1/2 -translate-y-1/2 w-8 h-8 lg:w-10 lg:h-10 bg-black/60 hover:bg-white text-white hover:text-black rounded-full flex items-center justify-center transition-all opacity-0 group-hover/phone:opacity-100 z-20"
+            className="absolute left-0 lg:left-2 top-1/2 -translate-y-1/2 w-8 h-8 lg:w-10 lg:h-10 bg-black/60 hover:bg-white text-white hover:text-black rounded-full flex items-center justify-center transition-all z-20 opacity-100 lg:opacity-0 lg:group-hover/phone:opacity-100"
           >
             <FiChevronLeft size={18} />
           </button>
           <button
             onClick={handleNext}
-            className="absolute right-0 lg:right-2 top-1/2 -translate-y-1/2 w-8 h-8 lg:w-10 lg:h-10 bg-black/60 hover:bg-white text-white hover:text-black rounded-full flex items-center justify-center transition-all opacity-0 group-hover/phone:opacity-100 z-20"
+            className="absolute right-0 lg:right-2 top-1/2 -translate-y-1/2 w-8 h-8 lg:w-10 lg:h-10 bg-black/60 hover:bg-white text-white hover:text-black rounded-full flex items-center justify-center transition-all z-20 opacity-100 lg:opacity-0 lg:group-hover/phone:opacity-100"
           >
             <FiChevronRight size={18} />
           </button>
